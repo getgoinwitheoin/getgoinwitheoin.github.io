@@ -3,30 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Construction</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Business Card</title>
+    <style>
+        /* Modern Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Card Container */
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Top Decorative Bar */
+        .card-header {
+            height: 12px;
+            background: linear-gradient(90deg, #4f46e5, #06b6d4);
+        }
+
+        /* Card Content */
+        .card-body {
+            padding: 40px 35px;
+        }
+
+        /* Profile Text */
+        .profile-name {
+            font-size: 2rem;
+            color: #1f2937;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .profile-title {
+            font-size: 1rem;
+            color: #4f46e5;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .profile-bio {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Divider Line */
+        .divider {
+            height: 1px;
+            background-color: #e5e7eb;
+            margin-bottom: 25px;
+        }
+
+        /* Contact Details */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item:hover {
+            color: #4f46e5;
+        }
+
+        /* Simple SVG Icon Styling */
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col justify-center items-center p-6">
+<body>
 
-    <main class="text-center max-w-md bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-200">
-        <div class="w-12 h-12 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.83-5.83m-3.75 3.75a3.75 3.75 0 11-5.304-5.304 3.75 3.75 0 015.304 5.304zm4.004-4.004l5.83-5.83A2.652 2.652 0 0017.25 3L11.42 8.83m3.75 3.75a3.75 3.75 0 11-5.304-5.304 3.75 3.75 0 015.304 5.304z" />
-            </svg>
+    <div class="card">
+        <div class="card-header"></div>
+        
+        <div class="card-body">
+            <h1 class="profile-name">Eoin Garvin</h1>
+            <p class="profile-title">Trainee Driving Instructor</p>
+            
+            <p class="profile-bio">
+                Hello, I am a professional motorcycle instructor training to be a car driving instructor. I live in Glasgow. If you would like to learn more about cars or bikes, or learning to drive please get in touch!
+                </p>
+            
+            <div class="divider"></div>
+            
+            <div class="contact-info">
+                <a href="mailto:getgoinwitheoin@gmail.com" class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    getgoinwitheoin@gmail.com
+                </a>
+                
+                <a href="tel:+447518704783" class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    075 18 704 783 
+                </a>
+                <p class="contact-item">(WhatsApp preferred)</p>
+            </div>
         </div>
-        
-        <h1 class="text-2xl font-bold tracking-tight text-gray-900 mb-2">
-            Under Construction
-        </h1>
-        
-        <p class="text-gray-500 text-sm leading-relaxed">
-            This domain has been successfully registered and configured. A new web project is currently being developed and will be available soon.
-        </p>
-    </main>
-
-    <footer class="mt-8 text-xs text-gray-400">
-;)
-    </footer>
+    </div>
 
 </body>
 </html>
